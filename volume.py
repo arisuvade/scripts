@@ -6,7 +6,7 @@ import os
 
 if argv[1] in ("-h", "--help"):
     print(
-        """a
+        """
 NAME
         Volume - increase and decrease volume
 SYPNOSIS
