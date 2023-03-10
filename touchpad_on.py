@@ -2,13 +2,8 @@
 
 import os
 
-
 # On the touchpad
 os.system("synclient TouchpadOff=0")
-
-os.system("id=$(xinput list --id-only 'SYN1B7B:01 06CB:2969 Touchpad'")
-os.system('xinput set-prop "$id" "Device Enabled" 0')
-
 print("Touchpad on")
 
 # On the tap-to-click
