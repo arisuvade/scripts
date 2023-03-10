@@ -17,6 +17,8 @@ OPTIONS
                 increase volume
         -d | --decrease
                 decrease volume
+        -s | --set
+                set volume
         --max
                 max volume
         --mute
@@ -37,9 +39,15 @@ if argv[1] in ("-i", "--increase", "-d", "--decrease"):
     if not is_valid:
         print(f"Volume {option}{argv[2]}%")
 
-elif argv[1] == "--max":
-    os.system("pactl set-sink-volume 0 153%")
-    print("Volume maxed out")
+elif argv[1] in ("-s", "--set", "--max"):
+    if argv[1] in ("-s", "--set"):
+        value: int = argv[2]
+        print(f"Volume {argv[2]}%")
+    else:
+        value: int = 153
+        print("Volume maxed out")
+
+    os.system(f"pactl set-sink-volume 0 {value}%")
 
 elif argv[1] in ("--mute", "--unmute"):
     if argv[1] == "--mute":
