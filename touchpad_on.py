@@ -1,9 +1,17 @@
 #!/usr/bin/env python
 
 import os
+import subprocess
 
 # On the touchpad
 os.system("synclient TouchpadOff=0")
+
+output = subprocess.check_output(
+    "xinput list --id-only 'SYN1B7B:01 06CB:2969 Touchpad'", shell=True
+)
+id = output.decode().strip()
+subprocess.call(f'xinput set-prop {id} "Device Enabled" 1', shell=True)
+
 print("Touchpad on")
 
 # On the tap-to-click
