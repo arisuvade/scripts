@@ -6,4 +6,5 @@ if [[ $id -ne 13 ]]; then
     xinput set-prop "$id" "Device Enabled" 0
 else
     xinput set-prop "$id" "Device Enabled" 1
+    ./scripts/touchpad_on.sh
 fi
