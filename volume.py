@@ -57,7 +57,7 @@ elif argv[1] in ("--mute", "--unmute"):
         is_mute: int = 0
         print("Volume muted")
 
-    os.system(f"pactl set-sink-mute 0 {is_mute}")
+    os.system(f"pactl set-sink-mute 1 {is_mute}")
 
 else:
     print("Invalid volume option")
