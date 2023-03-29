@@ -15,3 +15,6 @@ synclient TapButton2=3
 # On natural scrolling
 synclient VertScrollDelta=-111
 synclient HorizScrollDelta=-111
+
+# On touchpad settings
+~/Documents/scripts/touchpad-automation/touch-settings.sh
