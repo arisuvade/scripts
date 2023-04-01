@@ -1,6 +1,6 @@
-# My Arch Linux Scripts
+## Overview
 
-This repository contains various scripts that I've written to customize and automate tasks in my Arch Linux system.
+This repository contains a collection of scripts created by Arisuvade for use on Arch Linux. These scripts aim to improve the user experience and make managing an Arch Linux system easier.
 
 ## Installation
 
@@ -15,3 +15,9 @@ After cloning the repository, you can run the scripts by navigating to the direc
 ```bash
 $ ./myscript.sh
 ```
+
+## Contributions
+Contributions to this repository are welcome. If you have created a script that you think would be useful to other Arch Linux users, feel free to submit a pull request.
+
+## License
+All scripts in this repository are licensed under the GNU General Public License version 3.0. See LICENSE for more information.
