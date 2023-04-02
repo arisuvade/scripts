@@ -12,8 +12,14 @@ $ git clone https://github.com/arisuvade/scripts.git
 
 After cloning the repository, you can run the scripts by navigating to the directory where they are located and executing them with the appropriate permissions. For example:
 
+Bash:
 ```bash
-$ ./myscript.sh
+$ ./myscript.sh [OPTION]
+```
+
+Python:
+```python
+$ python3 myscript.py [OPTION]
 ```
 
 ## Contributions
