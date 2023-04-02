@@ -18,7 +18,7 @@ $ ./myscript.sh [OPTION]
 ```
 
 Python:
-```python
+```bash
 $ python3 myscript.py [OPTION]
 ```
 
