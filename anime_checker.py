@@ -21,6 +21,11 @@ for anime in anime_home:
     anime_url: str = anime.find("a")["href"]
     anime_list.append({"title": anime_title, "url": anime_url})
 
+if argv[1] == "--list":
+    for anime in anime_list:
+        print(anime["title"])
+    exit(0)
+
 search_anime: str = argv[1].lower()
 
 # get the index of anime in the anime_list
