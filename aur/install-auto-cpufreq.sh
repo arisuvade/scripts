@@ -1,6 +1,11 @@
 #!/bin/bash
 
 
+if [[ "$1" == "--uninstall" ]]; then
+    sudo pacman -Rns auto-cpufreq
+    exit 0
+fi
+
 # Check if yay is installed
 yay=/usr/bin/yay
 if [[ ! -d $yay ]]; then
