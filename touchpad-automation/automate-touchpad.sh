@@ -15,5 +15,5 @@ if [[ $current_id -ne $touchpad_id ]]; then
     
 else
     xinput set-prop "$current_id" "Device Enabled" 1
-    ./Documents/github-repos/scripts/touchpad-automation/touchpad-on.sh
+    ./github/scripts/touchpad-automation/touchpad-on.sh
 fi

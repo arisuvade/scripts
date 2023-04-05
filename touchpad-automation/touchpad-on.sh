@@ -20,4 +20,4 @@ synclient VertScrollDelta=-111
 synclient HorizScrollDelta=-111
 
 # On touchpad settings
-~/Documents/github-repos/scripts/touchpad-automation/touch-settings.sh
+~/github/scripts/touchpad-automation/touch-settings.sh
