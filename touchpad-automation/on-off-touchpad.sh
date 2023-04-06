@@ -8,8 +8,8 @@ touchpad=$(xinput list-props "$touchpad_name" | grep "Device Enabled" | awk '{pr
 
 # Off
 if [[ $touchpad -eq 1 ]]; then
-    ~/github/scripts/touchpad-automation/touchpad-off.sh
+    ~/GitHub/scripts/touchpad-automation/touchpad-off.sh
 # On
 else
-    ~/github/scripts/touchpad-automation/touchpad-on.sh
+    ~/GitHub/scripts/touchpad-automation/touchpad-on.sh
 fi
