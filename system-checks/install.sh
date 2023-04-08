@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Help section
 if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "Usage:"
     echo "  [OPTION]"
@@ -19,7 +20,7 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
 fi
 
 
-# Check the what shell are they using.
+# Add aliases to their respective shell
 case "$SHELL" in
     "/bin/bash")
         echo -e "\nalias batt='~/scripts/system-checks/check-battery.sh'" >> ~/.bashrc
