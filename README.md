@@ -22,6 +22,19 @@ Python:
 $ python3 myscript.py [OPTION]
 ```
 
+Or install it, so you can use the aliases. For example:
+
+Installation:
+```Bash
+$ cd [FOLDER]
+$ ./install.sh
+```
+
+Usage:
+```Bash
+$ [OPTION/ALIAS] [VALUE]
+```
+
 ## Contributions
 Contributions to this repository are welcome. If you have created a script that you think would be useful to other Arch Linux users, feel free to submit a pull request.
 
