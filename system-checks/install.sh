@@ -22,7 +22,7 @@ fi
 # Check the what shell are they using.
 case "$SHELL" in
     "/bin/bash")
-        echo "alias batt='~/scripts/system-checks/check-battery.sh'" >> ~/.bashrc
+        echo -e "\nalias batt='~/scripts/system-checks/check-battery.sh'" >> ~/.bashrc
         echo "alias bright='~/scripts/system-checks/check-brightness.sh'" >> ~/.bashrc
         echo "alias cdate='~/scripts/system-checks/check-date.sh'" >> ~/.bashrc
         echo "alias temp='~/scripts/system-checks/check-temperature.sh'" >> ~/.bashrc
@@ -31,7 +31,7 @@ case "$SHELL" in
         echo "alias vol='~/scripts/system-checks/check-volume.sh'" >> ~/.bashrc
         ;;
     "/usr/bin/zsh")
-        echo "alias batt='~/scripts/system-checks/check-battery.sh'" >> ~/.zshrc
+        echo -e "\nalias batt='~/scripts/system-checks/check-battery.sh'" >> ~/.zshrc
         echo "alias bright='~/scripts/system-checks/check-brightness.sh'" >> ~/.zshrc
         echo "alias cdate='~/scripts/system-checks/check-date.sh'" >> ~/.zshrc
         echo "alias temp='~/scripts/system-checks/check-temperature.sh'" >> ~/.zshrc
