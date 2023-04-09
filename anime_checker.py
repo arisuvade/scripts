@@ -4,10 +4,13 @@ import requests
 from bs4 import BeautifulSoup
 from sys import argv, exit
 
-
-if len(argv) < 2:
-    print("Run python3 anime_checker.py 'anime want to search'")
-    exit(1)
+if len(argv) < 2 or argv[1] in ("-h", "--help"):
+    print("Usage:")
+    print("    python3 anime_checker.py [ANIME KEYWORD]")
+    print("Commands:")
+    print("    -h, --help       Show this help and exit")
+    print("    --list           List all new episodes")
+    exit(0)
 
 url: str = "https://gogoanime.llc/"
 response = requests.get(url)
