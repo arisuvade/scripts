@@ -6,7 +6,7 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "  [OPTION]"
     echo ""
     echo "Commands:"
-    echo "-h, --help        Show this help and exit"
+    echo "  -h, --help      Show this help and exit"
     echo ""
     echo "Aliases:"
     echo "  batt            Check battery level"
