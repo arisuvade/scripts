@@ -13,4 +13,7 @@ cd system-controls && ./install.sh && cd ..
 cd system-error-fixes && ./install.sh && cd ..
 
 # Terminal utils
-cd terminal-utils && ./install.sh
+cd terminal-utils && ./install.sh && cd ..
+
+# Update scheduler
+./update-scheduler.sh
