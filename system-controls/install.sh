@@ -24,7 +24,7 @@ fi
 # Add aliases to their respective shell
 case "$SHELL" in
     "/bin/bash")
-        echo -e "\n# System controls"
+        echo -e "\n# System controls" >> ~/.bashrc
         echo "alias bdown='~/scripts/system-controls/brightness-down.sh'" >> ~/.bashrc
         echo "alias bdown='~/scripts/system-controls/brightness-max.sh'" >> ~/.bashrc
         echo "alias bdown='~/scripts/system-controls/brightness-up.sh'" >> ~/.bashrc
@@ -35,7 +35,7 @@ case "$SHELL" in
         echo "alias bdown='~/scripts/system-controls/volume.sh'" >> ~/.bashrc
         ;;
     "/usr/bin/zsh")
-        echo -e "\n# System controls"
+        echo -e "\n# System controls" >> ~/.zshrc
         echo "alias bdown='~/scripts/system-controls/brightness-down.sh'" >> ~/.zshrc
         echo "alias bdown='~/scripts/system-controls/brightness-max.sh'" >> ~/.zshrc
         echo "alias bdown='~/scripts/system-controls/brightness-up.sh'" >> ~/.zshrc

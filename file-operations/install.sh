@@ -20,14 +20,14 @@ fi
 # Add aliases to their respective shell
 case "$SHELL" in
     "/bin/bash")
-        echo -e "\n# File operations"
+        echo -e "\n# File operations" >> ~/.bashrc
         echo "alias cleanup='~/scripts/file-operations/cleanup.sh'" >> ~/.bashrc
         echo "alias findf='~/scripts/file-operations/find-file.sh'" >> ~/.bashrc
         echo "alias move='~/scripts/file-operations/move-file.sh'" >> ~/.bashrc
         echo "alias rename='~/scripts/file-operations/rename-file.sh'" >> ~/.bashrc
         ;;
     "/usr/bin/zsh")
-        echo -e "\n# File operations"
+        echo -e "\n# File operations" >> ~/.zshrc
         echo "alias cleanup='~/scripts/file-operations/cleanup.sh'" >> ~/.zshrc
         echo "alias findf='~/scripts/file-operations/find-file.sh'" >> ~/.zshrc
         echo "alias move='~/scripts/file-operations/move-file.sh'" >> ~/.zshrc

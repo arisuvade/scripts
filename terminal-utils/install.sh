@@ -17,12 +17,12 @@ fi
 # Add aliases to their respective shell
 case "$SHELL" in
     "/bin/bash")
-        echo -e "\n# Terminal utils"
+        echo -e "\n# Terminal utils" ~/.bashrc
         echo "alias assign='~/scripts/terminal-utils/assign-alias.sh'" >> ~/.bashrc
         echo "alias makeit='~/scripts/terminal-utils/make-it-executable.sh'" >> ~/.bashrc
         ;;
     "/usr/bin/zsh")
-        echo -e "\n# Terminal utils"
+        echo -e "\n# Terminal utils" >> ~/.zshrc
         echo "alias assign='~/scripts/terminal-utils/assign-alias.sh'" >> ~/.zshrc
         echo "alias makeit='~/scripts/terminal-utils/make-it-executable.sh'" >> ~/.zshrc
         ;;

@@ -23,7 +23,7 @@ fi
 # Add aliases to their respective shell
 case "$SHELL" in
     "/bin/bash")
-        echo -e "\n# System checks"
+        echo -e "\n# System checks" >> ~/.bashrc
         echo "alias batt='~/scripts/system-checks/check-battery.sh'" >> ~/.bashrc
         echo "alias bright='~/scripts/system-checks/check-brightness.sh'" >> ~/.bashrc
         echo "alias cdate='~/scripts/system-checks/check-date.sh'" >> ~/.bashrc
@@ -33,7 +33,7 @@ case "$SHELL" in
         echo "alias vol='~/scripts/system-checks/check-volume.sh'" >> ~/.bashrc
         ;;
     "/usr/bin/zsh")
-        echo -e "\n# System checks"
+        echo -e "\n# System checks" >> ~/.zshrc
         echo "alias batt='~/scripts/system-checks/check-battery.sh'" >> ~/.zshrc
         echo "alias bright='~/scripts/system-checks/check-brightness.sh'" >> ~/.zshrc
         echo "alias cdate='~/scripts/system-checks/check-date.sh'" >> ~/.zshrc
