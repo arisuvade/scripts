@@ -23,7 +23,7 @@ case "$SHELL" in
         ;;
     "/usr/bin/zsh")
         echo -e "\n# System error fixes" >> ~/.zshrc
-        echo "\nalias fixp='~/scripts/system-error-fixes/fix-pacman-error.sh'" >> ~/.zshrc
+        echo "alias fixp='~/scripts/system-error-fixes/fix-pacman-error.sh'" >> ~/.zshrc
         echo "alias fixz='~/scripts/system-error-fix/fix-zsh-error.sh'" >> ~/.zshrc
         ;;
     *)
