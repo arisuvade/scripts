@@ -17,11 +17,11 @@ fi
 # Add aliases to their respective shell
 case "$SHELL" in
     "/bin/bash")
-        echo -e "\nalias fixp='~/scripts/system-error-fix/fix-pacman-error.sh'" >> ~/.bashrc
+        echo -e "\nalias fixp='~/scripts/system-error-fixes/fix-pacman-error.sh'" >> ~/.bashrc
         echo "alias fixz='~/scripts/system-error-fix/fix-zsh-error.sh'" >> ~/.bashrc
         ;;
     "/usr/bin/zsh")
-         echo -e "\nalias fixp='~/scripts/system-error-fix/fix-pacman-error.sh'" >> ~/.zshrc
+         echo -e "\nalias fixp='~/scripts/system-error-fixes/fix-pacman-error.sh'" >> ~/.zshrc
         echo "alias fixz='~/scripts/system-error-fix/fix-zsh-error.sh'" >> ~/.zshrc
         ;;
     *)
