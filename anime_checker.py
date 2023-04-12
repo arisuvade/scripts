@@ -6,7 +6,7 @@ from sys import argv, exit
 
 if len(argv) < 2 or argv[1] in ("-h", "--help"):
     print("Usage:")
-    print("    python3 anime_checker.py [ANIME KEYWORD]")
+    print("    ./anime_checker.py [ANIME KEYWORD]")
     print("Commands:")
     print("    -h, --help       Show this help and exit")
     print("    --list           List all new episodes")
