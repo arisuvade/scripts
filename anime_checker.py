@@ -15,10 +15,14 @@ if len(argv) < 2 or argv[1] in ("-h", "--help"):
     exit(0)
 
 # Scrape the gogoanime site
-url: str = "https://gogoanime.llc/"
-response = requests.get(url)
-soup = BeautifulSoup(response.content, "html.parser")
-anime_list: list[dict[str, str]] = []
+try:
+    url: str = "https://gogoanime.llc/"
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, "html.parser")
+    anime_list: list[dict[str, str]] = []
+except:
+    print("No internet connection found. Please check your connection and try again.")
+    exit(1)
 
 # Find the list of anime on the home page
 anime_home = soup.find("ul", {"class": "items"}).find_all("li")
