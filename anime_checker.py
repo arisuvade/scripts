@@ -29,8 +29,9 @@ for anime in anime_home:
 
 # Print the list of all anime on the home page
 if argv[1] in ("-l", "--list"):
-    for anime in anime_list:
-        print(anime["title"])
+    print("New episodes:")
+    for i, anime in enumerate(anime_list, 1):
+        print(f"{i}. {anime['title']}")
     exit(0)
 
 # Anime keyword
