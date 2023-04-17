@@ -19,7 +19,7 @@ $ ./myscript.sh [OPTION]
 
 Python:
 ```bash
-$ python3 myscript.py [OPTION]
+$ ./myscript.py [OPTION]
 ```
 
 Or install it, so you can use the aliases. For example:
@@ -39,4 +39,4 @@ $ [OPTION/ALIAS] [VALUE]
 Contributions to this repository are welcome. If you have created a script that you think would be useful to other Arch Linux users, feel free to submit a pull request.
 
 ## License
-All scripts in this repository are licensed under the GNU General Public License version 3.0. See LICENSE for more information.
+All scripts in this repository are licensed under the GNU General Public License version 3.0. See [LICENSE](https://github.com/arisuvade/scripts/blob/main/LICENSE) for more information.
