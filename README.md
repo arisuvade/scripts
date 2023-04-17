@@ -19,7 +19,7 @@ $ ./myscript.sh [OPTION]
 
 Python:
 ```bash
-$ python3 myscript.py [OPTION]
+$ ./myscript.py [OPTION]
 ```
 
 ## Contributions
