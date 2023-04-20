@@ -9,6 +9,7 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "  -h, --help      Show this help and exit"
     echo ""
     echo "Aliases:"
+    echo "  installdate     Check Arch Linux install date"
     echo "  batt            Check battery level"
     echo "  bright          Check brightness level"
     echo "  cdate           Check current date"
@@ -24,6 +25,7 @@ fi
 case "$SHELL" in
     "/bin/bash")
         echo -e "\n# System checks" >> ~/.bashrc
+        echo "alias installdate='~/scripts/system-checks/arch-install-date.sh'" >> ~/.bashrc
         echo "alias batt='~/scripts/system-checks/check-battery.sh'" >> ~/.bashrc
         echo "alias bright='~/scripts/system-checks/check-brightness.sh'" >> ~/.bashrc
         echo "alias cdate='~/scripts/system-checks/check-date.sh'" >> ~/.bashrc
@@ -34,6 +36,7 @@ case "$SHELL" in
         ;;
     "/usr/bin/zsh")
         echo -e "\n# System checks" >> ~/.zshrc
+        echo "alias installdate='~/scripts/system-checks/arch-install-date.sh'" >> ~/.zshrc
         echo "alias batt='~/scripts/system-checks/check-battery.sh'" >> ~/.zshrc
         echo "alias bright='~/scripts/system-checks/check-brightness.sh'" >> ~/.zshrc
         echo "alias cdate='~/scripts/system-checks/check-date.sh'" >> ~/.zshrc
