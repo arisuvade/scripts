@@ -18,12 +18,15 @@ gith="/home/aries/GitHub/"
 sch="/home/aries/School/"
 home="/home/aries/"
 
+# Documents
 if [[ "$file" == *"$docs"* ]]; then
     mv "$renamed_file" /home/aries/Documents/
 
+# Downloads
 elif [[ "$file" == *"$dls"* ]]; then
     mv "$renamed_file" /home/aries/Downloads/
 
+# Pictures
 elif [[ "$file" == *"$pics"* ]]; then
     if [[ "$file" == *"/Wallpapers/"* ]]; then
         mv "$renamed_file" /home/aries/Pictures/Wallpapers/
@@ -33,6 +36,7 @@ elif [[ "$file" == *"$pics"* ]]; then
         mv "$renamed_file" /home/aries/Pictures/
     fi
 
+# Code
 elif [[ "$file" == *"$code"* ]]; then
     if [[ "$renamed_file" == *.py ]]; then
         mv "$renamed_file" /home/aries/Code/Python/
@@ -44,15 +48,15 @@ elif [[ "$file" == *"$code"* ]]; then
         mv "$renamed_file" /home/aries/Code/
     fi
 
+# GitHub
 elif [[ "$file" == *"$gith"* ]]; then
     mv "$renamed_file" /home/aries/GitHub/
 
+# School
 elif [[ "$file" == *"$sch"* ]]; then
     mv "$renamed_file" /home/aries/School/
 
-elif [[ "$file" == *"$scr"* ]]; then
-    mv "$renamed_file" /home/aries/scripts/
-
+# Home
 elif [[ "$file" == *"$home"* ]]; then
     mv "$renamed_file" /home/aries/
 fi
