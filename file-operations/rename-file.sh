@@ -13,9 +13,8 @@ fi
 docs="/home/aries/Documents/"
 dls="/home/aries/Downloads/"
 pics="/home/aries/Pictures/"
-prog="/home/aries/Programming/"
+code="/home/aries/Code/"
 sch="/home/aries/School/"
-scr="/home/aries/scripts/"
 home="/home/aries/"
 
 if [[ "$file" == *"$docs"* ]]; then
@@ -33,15 +32,15 @@ elif [[ "$file" == *"$pics"* ]]; then
         mv "$renamed_file" /home/aries/Pictures/
     fi
 
-elif [[ "$file" == *"$prog"* ]]; then
+elif [[ "$file" == *"$code"* ]]; then
     if [[ "$renamed_file" == *.py ]]; then
-        mv "$renamed_file" /home/aries/Programming/Python/
+        mv "$renamed_file" /home/aries/Code/Python/
     elif [[ "$renamed_file" == *.java ]]; then
-        mv "$renamed_file" /home/aries/Programming/Java/
+        mv "$renamed_file" /home/aries/Code/Java/
     elif [[ "$renamed_file" == *.js ]]; then
-        mv "$renamed_file" /home/aries/Programming/JavaScript/
+        mv "$renamed_file" /home/aries/Code/JavaScript/
     else
-        mv "$renamed_file" /home/aries/Programming/
+        mv "$renamed_file" /home/aries/Code/
     fi
 
 elif [[ "$file" == *"$sch"* ]]; then
