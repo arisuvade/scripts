@@ -15,6 +15,24 @@ cd system-error-fixes && ./install.sh && cd ..
 # Terminal utils
 cd terminal-utils && ./install.sh && cd ..
 
+# Help section
+if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+    echo "Usage:"
+    echo "  [OPTION] [VALUE]"
+    echo ""
+    echo "Commands:"
+    echo "  -h, --help      Show this help and exit"
+    echo ""
+    echo "Aliases:"
+    echo "  assign          Assign alias to the file"
+    echo "  anime           Search for anime in gogoanime.llc"
+    echo "  mouse           Set the mouse pointer speed"
+    echo "  unlockp         Unlock android phones"
+    echo "  updatesched     Put an update scheduler"
+    echo "  videor          Make a white bg reflector"
+    exit 0
+fi
+
 # Other scripts
 case "$SHELL" in
     "/bin/bash")
