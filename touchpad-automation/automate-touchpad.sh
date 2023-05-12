@@ -7,7 +7,7 @@ touchpad_id=13
 current_id=$(xinput list --id-only "$touchpad_name")
 
 # Off touchpad and on mouse pointer speed
-if [[ $current_id -ne $touchpad_id ]]; then
+if [[ $current_id -eq $touchpad_id ]]; then
     xinput set-prop "$current_id" "Device Enabled" 0
 
     # Disable touchscreen and mouse that I didn't know
