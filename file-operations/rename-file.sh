@@ -15,7 +15,7 @@ dls="/home/aries/Downloads/"
 pics="/home/aries/Pictures/"
 code="/home/aries/Code/"
 gith="/home/aries/GitHub/"
-sch="/home/aries/School/"
+sch="/home/aries/Schoolwork/"
 home="/home/aries/"
 
 # Documents
@@ -54,7 +54,7 @@ elif [[ "$file" == *"$gith"* ]]; then
 
 # School
 elif [[ "$file" == *"$sch"* ]]; then
-    mv "$renamed_file" /home/aries/School/
+    mv "$renamed_file" /home/aries/Schoolwork/
 
 # Home
 elif [[ "$file" == *"$home"* ]]; then
