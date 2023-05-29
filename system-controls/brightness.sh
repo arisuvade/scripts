@@ -4,7 +4,7 @@ if [[ $1 == "-h" || $1 == "--help" ]]; then
     echo "NAME"
     echo "    Brightness - increase and decrease brightness"
     echo "SYPNOSIS"
-    echo "    bash brightness.sh --option 'value'"
+    echo "    ./brightness.sh --option 'value'"
     echo ""
     echo "OPTIONS"
     echo "    -i | --increase"

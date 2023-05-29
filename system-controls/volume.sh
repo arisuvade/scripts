@@ -4,7 +4,7 @@ if [[ "$1" == "-h" || "$1" == "--help" ]]; then
     echo "NAME"
     echo "    Volume - increase and decrease volume"
     echo "SYPNOSIS"
-    echo "    volume.sh --option \"value\""
+    echo "    ./volume.sh --option \"value\""
     echo ""
     echo "OPTIONS"
     echo "    -i | --increase"
