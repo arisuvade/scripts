@@ -10,7 +10,7 @@ if argv[1] in ("-h", "--help"):
 NAME
         Brightness - increase and decrease brightness
 SYPNOSIS
-        python3 brightness.py --option "value"
+        ./brightness.py --option "value"
 
 OPTIONS
         -i | --increase

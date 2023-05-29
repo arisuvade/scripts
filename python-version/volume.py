@@ -10,7 +10,7 @@ if argv[1] in ("-h", "--help"):
 NAME
         Volume - increase and decrease volume
 SYPNOSIS
-        python3 volume.py --option "value"
+        ./volume.py --option "value"
 
 OPTIONS
         -i | --increase
