@@ -9,7 +9,7 @@ while true; do
     fi
 done
 
-read -p "Filename (Enter for default): " filename
+read -p "Filename: " filename
 
 if [[ -z $filename ]]; then
     output=$(yt-dlp -x --audio-format mp3 $url)
