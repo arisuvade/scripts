@@ -1,4 +1,4 @@
-# My Linux Utility Scripts
+# My Scripts: Functionalities and Utilities
 
 ## Overview
 
