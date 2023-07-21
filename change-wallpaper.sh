@@ -15,7 +15,10 @@ restart_i3() {
     i3-msg restart > /dev/null
     line="exec_always --no-startup-id feh --bg-fill"
     sed -i "s|^\s*$line.*$|exec --no-startup-id feh --bg-fill '$wallpaper_path'|" $path
-    echo "Wallpaper changed successfully to: $wallpaper_path"
+
+    wallpaper_filename=$(basename "$wallpaper_path")
+    wallpaper_filename_no_ext="${wallpaper_filename%.*}"
+    echo "Wallpaper changed successfully to: $wallpaper_filename_no_ext"
 }
 
 # Check if a wallpaper path argument is provided
