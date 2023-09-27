@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change to your touchpad name
-touchpad_name="YSPRINGTECH USB OPTICAL MOUSE"
+touchpad_name="SYN1B7B:01 06CB:2969 Touchpad"
 
 # Touchpad
 touchpad=$(xinput list-props "$touchpad_name" | grep "Device Enabled" | awk '{print $4}')
