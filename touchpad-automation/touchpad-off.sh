@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change to your touchpad name
-touchpad_name="SYN1B7B:01 06CB:2969 Touchpad"
+touchpad_name="YSPRINGTECH USB OPTICAL MOUSE"
 
 # Off touchpad
 synclient TouchpadOff=1

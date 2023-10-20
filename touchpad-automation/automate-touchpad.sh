@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change to your touchpad name and id
-touchpad_name="SYN1B7B:01 06CB:2969 Touchpad"
+touchpad_name="YSPRINGTECH USB OPTICAL MOUSE"
 touchpad_id=13
 
 current_id=$(xinput list --id-only "$touchpad_name")
