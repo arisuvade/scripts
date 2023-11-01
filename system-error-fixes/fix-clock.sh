@@ -1,9 +1,10 @@
 #!/bin/bash
 
-if [ $# -eq 4 ]; then
-    new_datetime="2023-$1-$2 $3:$4"
+if [ $# -eq 2 ]; then
+    current_date=$(date -u -d "$(curl -s --head 'https://www.google.com' | grep ^Date: | sed 's/Date: //')" +"%Y-%m-%d")
+    new_datetime="$current_date $1:$2"
     sudo timedatectl set-time "$new_datetime"
     timedatectl
 else
-    echo "Usage: clock month day hour minute"
+    echo "Usage: clock hour minute"
 fi
