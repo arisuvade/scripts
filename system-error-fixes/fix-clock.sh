@@ -16,3 +16,7 @@ sudo timedatectl set-time "$new_datetime"
 
 # Inform the user that it is successful
 echo "System time and date have been successfully updated."
+
+# Off alacritty
+pkill alacritty
+
