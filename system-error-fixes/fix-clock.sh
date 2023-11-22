@@ -17,6 +17,9 @@ sudo timedatectl set-time "$new_datetime"
 # Inform the user that it is successful
 echo "System time and date have been successfully updated."
 
+# Boot up BIOS
+sudo bootctl reboot-to-firmware true
+
 # Off alacritty
 pkill alacritty
 
