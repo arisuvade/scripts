@@ -20,6 +20,10 @@ echo "System time and date have been successfully updated."
 # Boot up BIOS
 sudo bootctl reboot-to-firmware true
 
+# For test only
+sudo sysctl net/ipv4/tcp_ecn=0
+sudo sysctl net/ipv4/tcp_window_scaling=0
+
 # Off alacritty
 pkill alacritty
 
