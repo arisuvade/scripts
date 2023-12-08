@@ -3,8 +3,10 @@
 # Set and check if the input is correct
 if [ $# -eq 6 ]; then
     new_datetime="$1-$2-$3 $4:$5:$6"
+elif [ $# -eq 4 ]; then
+    new_datetime="2023-$1-$2 $3:$4"
 else
-    echo "Usage: clock year month day hour minute second"
+    echo "Usage: ./fix-clock.sh month day hour minute"
     exit 1
 fi
 
