@@ -1,18 +1,15 @@
 #!/bin/bash
 
 # Set and check if the input is correct
-if [ $# -eq 4 ]; then
-    new_datetime="2023-$1-$2 $3:$4"
+if [ $# -eq 6 ]; then
+    new_datetime="$1-$2-$3 $4:$5:$6"
 else
-    echo "Usage: clock month day hour minute"
+    echo "Usage: clock year month day hour minute second"
     exit 1
 fi
 
 # Set time and date
 sudo timedatectl set-time "$new_datetime"
-
-# Restart polybar
-~/.config/polybar/launch.sh > /dev/null 2>&1 &
 
 # Inform the user that it is successful
 echo "System time and date have been successfully updated."
