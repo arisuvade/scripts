@@ -21,7 +21,8 @@ def get_time_in_philippines():
         second = current_time[17:19]
 
         # Run the commands on terminal
-        os.system(f"clock {year} {month} {day} {hour} {minute} {second}")
+        command_location = "~/GitHub/scripts/system-error-fixes/fix-clock.sh"
+        os.system(f"{command_location} {year} {month} {day} {hour} {minute} {second}")
         os.system("poly")
 
     except requests.exceptions.RequestException as e:
