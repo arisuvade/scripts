@@ -1,4 +1,3 @@
 #!/bin/bash
 
-id=$(xinput list --id-only 'YSPRINGTECH USB OPTICAL MOUSE')
-xinput --set-prop $id 'libinput Accel Speed' -0.99
+xinput --set-prop 11 'libinput Accel Speed' -0.75

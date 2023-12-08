@@ -2,7 +2,7 @@
 
 # Change to your touchpad name and id
 touchpad_name="SYN1B7B:01 06CB:2969 Touchpad"
-touchpad_id=13
+touchpad_id=16
 
 current_id=$(xinput list --id-only "$touchpad_name")
 
