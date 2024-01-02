@@ -4,7 +4,7 @@
 if [ $# -eq 6 ]; then
     new_datetime="$1-$2-$3 $4:$5:$6"
 elif [ $# -eq 4 ]; then
-    new_datetime="2023-$1-$2 $3:$4"
+    new_datetime="2024-$1-$2 $3:$4"
 else
     echo "Usage: clock month day hour minute"
     exit 1
