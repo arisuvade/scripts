@@ -2,10 +2,14 @@
 
 block_webcam() {
     sudo modprobe -r uvcvideo
+    echo "blacklist uvcvideo" | sudo tee -a /etc/modprobe.d/blacklist-webcam.conf > /dev/null
+    echo "Webcam blocked!"
 }
 
 unblock_webcam() {
+    sudo sed -i '/blacklist uvcvideo/d' /etc/modprobe.d/blacklist-webcam.conf
     sudo modprobe uvcvideo
+    echo "Webcam unblocked!"
 }
 
 case "$1" in
