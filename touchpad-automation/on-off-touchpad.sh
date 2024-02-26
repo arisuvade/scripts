@@ -20,3 +20,6 @@ else
     # On touchscreen also
     ~/GitHub/scripts/touchscreen-automation/touchscreen-on.sh
 fi
+
+# If drivers are reset
+~/GitHub/scripts/mouse-pointer-speed.sh
