@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Add to Visudo to run with sudo
+# aries ALL=(ALL) NOPASSWD: /home/aries/github/scripts/system-error-fixes/fix-clock.sh
+
 # Set and check if the input is correct
 if [ $# -eq 6 ]; then
     new_datetime="$1-$2-$3 $4:$5:$6"
@@ -20,7 +23,7 @@ echo "System time and date have been successfully updated."
 sudo bootctl reboot-to-firmware true
 
 # For test only
-sudo sysctl -p
+#sudo sysctl -p
 
 # Off alacritty
 #pkill alacritty
