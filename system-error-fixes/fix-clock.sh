@@ -23,5 +23,4 @@ sudo bootctl reboot-to-firmware true
 sudo sysctl -p
 
 # Off alacritty
-pkill alacritty
-
+#pkill alacritty
