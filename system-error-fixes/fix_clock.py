@@ -23,8 +23,6 @@ def get_time_in_philippines():
         # Run the commands on terminal
         command_location = "~/github/scripts/system-error-fixes/fix-clock.sh"
         os.system(f"sudo {command_location} {year} {month} {day} {hour} {minute} {second}")
-        
-        os.system("~/.config/polybar/launch.sh")
 
     except requests.exceptions.RequestException as e:
         print(f"Error fetching time data: {e}")
