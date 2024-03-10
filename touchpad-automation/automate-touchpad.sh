@@ -14,8 +14,8 @@ if [[ $current_id -eq $touchpad_id ]]; then
     xinput set-prop "$(xinput list --id-only 'ELAN Touchscreen')" "Device Enabled" 0
     xinput set-prop "$(xinput list --id-only 'SYN1B7B:01 06CB:2969 Mouse')" "Device Enabled" 0
 
-    # On mouse pointer speed
-    ~/github/scripts/mouse-pointer-speed.sh
+    # Change mouse pointer speed
+    ~/github/scripts/touchpad-automation/mouse-pointer-speed.sh
 
 # On touchpad
 else
