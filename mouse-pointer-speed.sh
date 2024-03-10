@@ -1,3 +1,7 @@
 #!/bin/bash
 
-xinput --set-prop 14 'libinput Accel Speed' -0.9
+mouse_id=$(xinput list --id-only 'pointer:2.4G Mouse')
+
+# Set mouse speed
+xinput --set-prop $mouse_id 'libinput Accel Speed' -0.9
+
