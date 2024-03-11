@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Add to Visudo to run with sudo
-# aries ALL=(ALL) NOPASSWD: /home/aries/github/scripts/system-error-fixes/fix-clock.sh
+# aries ALL=(ALL) NOPASSWD: /home/aries/GitHub/scripts/system-error-fixes/fix-clock.sh
 
 # Set and check if the input is correct
 if [ $# -eq 6 ]; then

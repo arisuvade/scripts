@@ -21,8 +21,10 @@ def get_time_in_philippines():
         second = current_time[17:19]
 
         # Run the commands on terminal
-        command_location = "~/github/scripts/system-error-fixes/fix-clock.sh"
-        os.system(f"sudo {command_location} {year} {month} {day} {hour} {minute} {second}")
+        command_location = "~/GitHub/scripts/system-error-fixes/fix-clock.sh"
+        os.system(
+            f"sudo {command_location} {year} {month} {day} {hour} {minute} {second}"
+        )
 
     except requests.exceptions.RequestException as e:
         print(f"Error fetching time data: {e}")
