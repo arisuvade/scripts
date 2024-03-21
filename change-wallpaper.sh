@@ -1,38 +1,40 @@
 #!/bin/bash
 
-# Paths
-path="/home/aries/.config/i3/config"
-wallpaper_path="$1"
+# Hyprpaper configuration path
+conf_path="/home/aries/.config/hypr/hyprpaper.conf"
 
-# Function to change the wallpaper line in the i3 config
-change_i3_wallpaper() {
-    line="exec --no-startup-id feh --bg-fill"
-    sed -i "s|^\s*$line.*$|exec_always --no-startup-id feh --bg-fill '$wallpaper_path'|" $path
-}
+# Wallpaper path
+wallpaper_path=$1
 
-# Function to apply the wallpaper and replace exec_always
-restart_i3() {
-    i3-msg restart > /dev/null
-    line="exec_always --no-startup-id feh --bg-fill"
-    sed -i "s|^\s*$line.*$|exec --no-startup-id feh --bg-fill '$wallpaper_path'|" $path
-
-    wallpaper_filename=$(basename "$wallpaper_path")
-    wallpaper_filename_no_ext="${wallpaper_filename%.*}"
-    echo "Wallpaper changed successfully to: $wallpaper_filename_no_ext"
-}
-
-# Check if a wallpaper path argument is provided
-if [ -z "$1" ]; then
-    echo "Usage: $0 <path_to_wallpaper>"
+# Check if the wallpaper file exists
+if [ ! -f "$wallpaper_path" ]; then
+    echo "Error: Wallpaper file does not exist."
     exit 1
 fi
 
-# Check if the provided wallpaper path is valid
-if [ ! -f "$1" ]; then
-    echo "Error: The specified wallpaper file does not exist."
-    exit 1
+# Update the configuration file
+sed -i "s|preload = .*|preload = $wallpaper_path|" $conf_path
+sed -i "s|wallpaper = .*|wallpaper = eDP-1, $wallpaper_path|" $conf_path
+
+# Check if the user want to enable/disable splash message
+if [[ "$2" == "-s" || "$2" == "--splash" ]]; then
+
+    # Check if to on or off the splash
+    if [[ "$3" == "on" ]]; then
+        sed -i "s|splash = .*|splash = true|" $conf_path
+    elif [[ "$3" == "off" ]]; then
+        sed -i "s|splash = .*|splash = false|" $conf_path
+    else
+        echo "Invalid option for splash. Use 'on' or 'off'."
+        exit 1
+    fi
+
 fi
 
-# Call the functions to change and apply wallpaper
-change_i3_wallpaper
-restart_i3
+# Kill hyprpaper first to run new instance
+pkill hyprpaper
+
+# Reload Hyprland to apply the new wallpaper
+hyprctl reload > /dev/null 2>&1
+
+echo "Wallpaper changed successfully."
