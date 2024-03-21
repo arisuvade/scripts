@@ -8,3 +8,6 @@ synclient TouchpadOff=1
 
 id=$(xinput list --id-only "$touchpad_name")
 xinput set-prop "$id" "Device Enabled" 0
+
+# Off touchscreen also
+xinput set-prop "$(xinput list --id-only 'ELAN Touchscreen')" "Device Enabled" 0
