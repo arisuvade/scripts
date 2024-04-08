@@ -3,7 +3,7 @@
 mouse_id=$(xinput list --id-only 'pointer:2.4G Mouse')
 
 # Set mouse speed
-xinput --set-prop $mouse_id 'libinput Accel Speed' -0.9
+xinput --set-prop $mouse_id 'libinput Accel Speed' -1
 
 # Off touchpad and touchscreen
 xinput set-prop "$(xinput list --id-only 'SYN1B7B:01 06CB:2969 Touchpad')" "Device Enabled" 0
