@@ -12,9 +12,9 @@ function fix_clock {
         hour=$(date -d "$current_time" +"%-H")
         minute=$(date -d "$current_time" +"%-M")
         second=$(date -d "$current_time" +"%-S")
-        
+
         # Set time and date
-        sudo timedatectl set-time "$year-$month-$day $hour:$minute:$second"
+        timedatectl set-time "$year-$month-$day $hour:$minute:$second"
         echo "System time and date have been successfully updated."
     }
 
