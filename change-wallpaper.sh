@@ -15,6 +15,7 @@ fi
 # Update the configuration file
 sed -i "s|preload = .*|preload = $wallpaper_path|" $conf_path
 sed -i "s|wallpaper = .*|wallpaper = eDP-1, $wallpaper_path|" $conf_path
+sed -i "s|wallpaper = .*|wallpaper = HDMI-A-1, $wallpaper_path|" $conf_path
 
 # Check if the user want to enable/disable splash message
 if [[ "$2" == "-s" || "$2" == "--splash" ]]; then
