@@ -1,29 +1,31 @@
 #!/bin/bash
 
-# Function to get current brightness
-get_brightness() {
-    ddcutil getvcp 0x10 | awk '{print $9}' | sed 's/,//'
-}
+STATE="/home/aries/Documents/scripts/brightness/get_brightness.txt"
+LOCK="/tmp/brightness-lock"
+STEP=${1:-5}
 
-# Increase the brightness by N
-increase_brightness() {
-    if [ -z "$1" ]; then
-        echo "Usage: $0 <amount>"
-        exit 1
-    fi
+# cooldown check (3 seconds)
+if [ -f "$LOCK" ] && [ $(($(date +%s) - $(cat "$LOCK"))) -lt 2 ]; then
+    exit 0
+fi
+date +%s > "$LOCK"
 
-    current_brightness=$(get_brightness)
-    increase_by=$1
-    new_brightness=$((current_brightness + increase_by))
+# init state file if missing
+if [ ! -f "$STATE" ]; then
+    echo 50 > "$STATE"
+fi
 
-    # Ensure brightness stays between 10 and 100
-    if [ $new_brightness -gt 100 ]; then
-        new_brightness=100
-    fi
+current=$(cat "$STATE")
+new=$((current + STEP))
 
-    # Set the new brightness
-    ddcutil setvcp 0x10 $new_brightness
-    echo "Brightness increased to $new_brightness"
-}
+# Clamp
+if [ "$new" -gt 100 ]; then
+    new=100
+fi
 
-increase_brightness $1
+# Set brightness
+if ddcutil setvcp 0x10 "$new" &>/dev/null; then
+    echo "$new" > "$STATE"
+else
+    echo "Failed to set brightness" >&2
+fi
